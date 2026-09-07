@@ -1,0 +1,5 @@
+-- VIEW 4: Sách đã hết
+CREATE OR REPLACE VIEW vw_SachHet AS
+SELECT MaSach, TenSach, SoLuong, SoLuongCon
+FROM SACH
+WHERE SoLuongCon = 0;
