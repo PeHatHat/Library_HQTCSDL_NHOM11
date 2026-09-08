@@ -1,0 +1,17 @@
+USE QLThuVien;
+
+DROP FUNCTION IF EXISTS fn_SoNgayMuon;
+
+DELIMITER //
+
+CREATE FUNCTION fn_SoNgayMuon(
+    p_NgayMuon DATE,
+    p_HanTra DATE
+)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN DATEDIFF(p_HanTra, p_NgayMuon);
+END //
+
+DELIMITER ;
