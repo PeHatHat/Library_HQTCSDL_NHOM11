@@ -1,0 +1,13 @@
+CREATE OR REPLACE VIEW vw_SachDangMuon AS
+SELECT 
+    PM.MaPM,
+    DG.HoTen,
+    S.TenSach,
+    PM.NgayMuon,
+    CT.HanTra,
+    PM.TrangThai
+FROM PHIEUMUON PM
+JOIN DOCGIA DG ON PM.MaDG = DG.MaDG
+JOIN CT_PHIEUMUON CT ON PM.MaPM = CT.MaPM
+JOIN SACH S ON CT.MaSach = S.MaSach
+WHERE PM.TrangThai = 'DangMuon';
