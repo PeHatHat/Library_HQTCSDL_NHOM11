@@ -1,0 +1,3 @@
+CREATE OR REPLACE VIEW vw_DanhSachSach AS
+SELECT MaSach, TenSach, SoLuong, SoLuongCon
+FROM SACH;
